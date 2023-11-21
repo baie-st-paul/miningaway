@@ -39,6 +39,7 @@ object Betterthaumcraft : ModInitializer {
 						FabricItemSettings()
 				),
 		)
+
 	}
 
 }
