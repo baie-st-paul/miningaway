@@ -1,5 +1,6 @@
 package com.example
 
+import com.example.blocks.MagicBomb
 import com.example.blocks.ModBlocks
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
@@ -16,10 +17,10 @@ import org.slf4j.LoggerFactory
 object Betterthaumcraft : ModInitializer {
     private val logger = LoggerFactory.getLogger("betterthaumcraft")
 
-	val exemple : ExBlock = ExBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f))
+	//private val exemple : ExBlock = ExBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f))
 
-	val MAGIC_BOMB_BLOCK = Block(FabricBlockSettings.of(Material.METAL).strength(4f))
-	val MAGICRAFTER = Block(FabricBlockSettings.of(Material.WOOD).strength(2f))
+	private val MAGIC_BOMB_BLOCK : MagicBomb = MagicBomb(FabricBlockSettings.of(Material.METAL).strength(4f))
+	//val MAGICRAFTER = Block(FabricBlockSettings.of(Material.WOOD).strength(2f))
 
 
 	override fun onInitialize() {
@@ -28,6 +29,8 @@ object Betterthaumcraft : ModInitializer {
 		// Proceed with mild caution.
 		logger.info("Hello Fabric world!")
 //		ModBlocks.registerAllBlocks()
+
+		/*
 		Registry.register(
 				Registries.BLOCK,
 				Identifier(
@@ -48,7 +51,7 @@ object Betterthaumcraft : ModInitializer {
 				),
 		)
 
-
+*/
 		Registry.register(
 			Registries.BLOCK,
 			Identifier(

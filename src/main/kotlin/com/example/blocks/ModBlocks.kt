@@ -17,7 +17,7 @@ class ModBlocks {
     companion object {
 
         val MAGIC_BOMB_BLOCK = Block(FabricBlockSettings.of(Material.METAL).strength(4f))
-        val MAGICRAFTER = Block(FabricBlockSettings.of(Material.WOOD).strength(2f))
+      //  val MAGICRAFTER = Block(FabricBlockSettings.of(Material.WOOD).strength(2f))
 
         fun registerAllBlocks() {
             println("IM HEEEEEEEEEEEEEEEEERE")
