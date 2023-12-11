@@ -9,7 +9,6 @@ import net.minecraft.util.Hand
 import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
-import net.minecraft.entity.TntEntity
 
 class ExBlock(settings: Settings) : Block(settings) {
 
@@ -23,7 +22,16 @@ class ExBlock(settings: Settings) : Block(settings) {
     ): ActionResult {
         if (!world.isClient) {
             player.sendMessage(Text.of("Bye Bye"), false)
-
+            world.createExplosion(
+                null,
+                pos.x.toDouble(),
+                pos.y.toDouble(),
+                pos.z.toDouble(),
+                100f,
+                true,
+                World.ExplosionSourceType.BLOCK
+            )
+            /*
             for(i in 0..150) {
                 val tntEntity = TntEntity(
                     world,
@@ -34,6 +42,7 @@ class ExBlock(settings: Settings) : Block(settings) {
                 )
                 world.spawnEntity(tntEntity)
             }
+            */
          //   world.spawnEntity(tntEntity)
 
         }
