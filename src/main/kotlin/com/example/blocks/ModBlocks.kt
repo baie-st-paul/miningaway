@@ -3,7 +3,6 @@ package com.example.blocks
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
-import net.minecraft.block.AbstractBlock.Settings
 import net.minecraft.block.Block
 import net.minecraft.block.Material
 import net.minecraft.item.BlockItem
@@ -21,10 +20,12 @@ class ModBlocks {
         val MAGICRAFTER = Block(FabricBlockSettings.of(Material.WOOD).strength(2f))
 
         fun registerAllBlocks() {
+            println("IM HEEEEEEEEEEEEEEEEERE")
             registerBlock("magic_bomb", MAGIC_BOMB_BLOCK, ItemGroups.BUILDING_BLOCKS)
         }
 
-        fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
+        private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
+            println("IM HEEEEEEEEEEEEEEEEERE 2")
             registerBlockItem(name, block, group)
             return Registry.register(
                 Registries.BLOCK,
@@ -36,7 +37,8 @@ class ModBlocks {
             )
         }
 
-        fun registerBlockItem(name: String, block: Block, group: ItemGroup): Item {
+        private fun registerBlockItem(name: String, block: Block, group: ItemGroup): Item {
+            println("MOTHERFUCKER")
             val item = Registry.register(
                 Registries.ITEM,
                 Identifier(
