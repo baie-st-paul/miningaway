@@ -9,10 +9,11 @@ import net.minecraft.util.Hand
 import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
+import net.minecraft.entity.TntEntity
 
-class ExBlock(settings: Settings) : Block(settings) {
+class ExBlock(settings: Settings) : Block(settings){
 
-    public override fun onUse(
+    override fun onUse(
             state: BlockState,
             world: World,
             pos: BlockPos,
@@ -21,8 +22,25 @@ class ExBlock(settings: Settings) : Block(settings) {
             hit: BlockHitResult
     ): ActionResult {
         if (!world.isClient) {
-            player.sendMessage(Text.of("Hello, world!"), false)
+            player.sendMessage(Text.of("Bye Bye"), false)
+
+            for(i in 0..150) {
+                val tntEntity = TntEntity(
+                    world,
+                    pos.x.toDouble(),
+                    pos.y.toDouble(),
+                    pos.z.toDouble(),
+                    player
+                )
+                world.spawnEntity(tntEntity)
+            }
+         //   world.spawnEntity(tntEntity)
+
         }
         return ActionResult.SUCCESS
     }
 }
+
+//class ExBlockEntity: TntEntity {
+//
+//}
