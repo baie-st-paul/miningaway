@@ -17,15 +17,14 @@ class ModBlocks {
     companion object {
 
         val MAGIC_BOMB_BLOCK = Block(FabricBlockSettings.of(Material.METAL).strength(4f))
-      //  val MAGICRAFTER = Block(FabricBlockSettings.of(Material.WOOD).strength(2f))
+        val MAGICRAFTER = Block(FabricBlockSettings.of(Material.WOOD).strength(2f))
 
         fun registerAllBlocks() {
-            println("IM HEEEEEEEEEEEEEEEEERE")
-            registerBlock("magic_bomb", MAGIC_BOMB_BLOCK, ItemGroups.BUILDING_BLOCKS)
+            registerBlock("magic_bomb", MAGIC_BOMB_BLOCK, ItemGroups.COMBAT)
+            registerBlock("magicrafter", MAGICRAFTER, ItemGroups.FUNCTIONAL)
         }
 
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
-            println("IM HEEEEEEEEEEEEEEEEERE 2")
             registerBlockItem(name, block, group)
             return Registry.register(
                 Registries.BLOCK,
@@ -38,7 +37,6 @@ class ModBlocks {
         }
 
         private fun registerBlockItem(name: String, block: Block, group: ItemGroup): Item {
-            println("MOTHERFUCKER")
             val item = Registry.register(
                 Registries.ITEM,
                 Identifier(
