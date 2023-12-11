@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import net.minecraft.entity.TntEntity
 
-class ExBlock(settings: Settings) : Block(settings){
+class ExBlock(settings: Settings) : Block(settings) {
 
     override fun onUse(
             state: BlockState,

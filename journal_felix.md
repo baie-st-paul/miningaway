@@ -10,7 +10,9 @@ je cherche un peu plus d'info sur comment faire un mod minecraft et je me suis d
 en essayant de comprendre la structure de fichiers du projet je suis tombé sur cet article un peu useless a mon avis... https://madelinemiller.dev/blog/forge-vs-fabric/ mais a ma surprise, l'auteur est une senior software engineer à microsoft et a fait le mod WorldEdit, de toutes les choses.
 
 --- 
+
 petit break
+
 ---
 
 on a outliné notre plan d'action pour un MVP pendant notre break
@@ -30,3 +32,11 @@ il se comprend de 4 morceaux majeurs:
   - crafted in magicrafter
   - grosse explosion (BCP plus grande que TNT)
   - optionnel: laisse une zone magique deriere elle dans la blast zone.
+
+---
+
+j'e pense avoir catché comment  enregistrer nos affaires dans un itemgroup. ca devrait nous permettre de voir nos objets dans le menu creatif.
+
+---
+
+suddently nothing is working parce que mc arrive pas a loader la librairie du narrateur... -_-

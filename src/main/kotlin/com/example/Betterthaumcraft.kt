@@ -1,5 +1,6 @@
 package com.example
 
+import com.example.blocks.ModBlocks
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
@@ -20,6 +21,7 @@ object Betterthaumcraft : ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		logger.info("Hello Fabric world!")
+		ModBlocks.registerAllBlocks()
 		Registry.register(
 				Registries.BLOCK,
 				Identifier(
