@@ -17,7 +17,6 @@ import org.slf4j.LoggerFactory
 object Betterthaumcraft : ModInitializer {
     private val logger = LoggerFactory.getLogger("betterthaumcraft")
 
-	private val magicBomb: MagicBomb = MagicBomb(FabricBlockSettings.of(Material.METAL).strength(4.0f))
 	private val magicOMeter: MagicOMeter = MagicOMeter(FabricItemSettings())
 
 	override fun onInitialize() {
@@ -25,25 +24,7 @@ object Betterthaumcraft : ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		logger.info("Hello Fabric world!")
-		Registry.register(
-			Registries.BLOCK,
-			Identifier(
-				"betterthaumcraft",
-				"magic_bomb"
-			),
-			magicBomb,
-		)
-		Registry.register(
-			Registries.ITEM,
-			Identifier(
-				"betterthaumcraft",
-				"magic_bomb"
-			),
-			BlockItem(
-				magicBomb,
-				FabricItemSettings()
-			),
-		)
+		ModBlocks.registerAllBlocks()
 		Registry.register(
 			Registries.ITEM,
 			Identifier(
