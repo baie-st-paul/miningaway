@@ -18,9 +18,9 @@ class ModBlocks {
 
     companion object {
 
-        val MAGIC_BOMB_BLOCK = Block(FabricBlockSettings.of(Material.METAL).strength(4f))
-        val MAGICRAFTER = Block(FabricBlockSettings.of(Material.WOOD).strength(2f))
-        val NODE_STONE = NodeStone(FabricBlockSettings.of(Material.STONE).strength(3f))
+        private val MAGIC_BOMB_BLOCK = MagicBomb(FabricBlockSettings.of(Material.METAL).strength(4f))
+        private val MAGICRAFTER = Magicrafter(FabricBlockSettings.of(Material.WOOD).strength(2f))
+        private val NODE_STONE = NodeStone(FabricBlockSettings.of(Material.STONE).strength(3f))
         val NODE_STONE_ENTITY = FabricBlockEntityTypeBuilder.create(::NodeStoneEntity, NODE_STONE).build(null)
 
         fun registerAllBlocks() {

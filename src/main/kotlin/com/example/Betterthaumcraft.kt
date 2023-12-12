@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory
 object Betterthaumcraft : ModInitializer {
     private val logger = LoggerFactory.getLogger("betterthaumcraft")
 
-	private val magicOMeter: MagicOMeter = MagicOMeter(FabricItemSettings())
+	val magicOMeter: MagicOMeter = MagicOMeter(FabricItemSettings())
 
 	override fun onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
