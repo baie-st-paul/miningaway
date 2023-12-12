@@ -54,3 +54,23 @@ i learned that i absolutely have to register an object even if i dont plan on us
 
 that means that even if i only *instantiate* a block in a *class* as a private member, something static in the
 constructor adds it to a list somewhere and that list is eventually traversed and validated during the loading phase.
+
+turns out the problem really didnt have anything to do with the dreaded narrator...
+
+---
+
+je cherche comment faire la zone magique et je suis tombé la
+dessus: https://fabricmc.net/wiki/tutorial:particles#adding_complex_particles
+
+donc, maintenant on sais que le wiki est au moins pas complet pour fabric.
+
+---
+
+to implement the areas, i settled on simply making a block with an attached block entity, and to scan for a certain
+number of that block in the suroundings. to do so, im looking through this very comprehensive
+tutorial: https://fabricmc.net/wiki/tutorial:screenhandler
+and im also looking on using the `world.collectEntityByType` function.
+
+---
+
+en fin de compte j'ai pas du tout fait ca. j'ai juste fais une fonction qui prend une position et le `World` et qui parcoure manuellement avec des for loops les entourages de la position dans un range donné, retournant le nombre de NodeStoneEntity trouvée. probablement refactorable pour n'importe quel bloc
