@@ -1,5 +1,6 @@
 package com.example.blocks
 
+import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
 import net.minecraft.entity.player.PlayerEntity
@@ -10,7 +11,7 @@ import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 
-class MagicBomb(settings: Settings) : Block(settings)  {
+class MagicBomb(settings: FabricBlockSettings) : Block(settings)  {
 
     override fun onUse(
         state: BlockState,
