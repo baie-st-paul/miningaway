@@ -6,4 +6,12 @@
 # 11 Decembre
 ***
 * changement du block "Nuke" au lien de spawn TNT il summon un explosion
-* 
+* Ajout d'un block node qui agit comme un block de magie
+* Ajout d'un item magicOMetter qui permet de regarder le nombre de node dans un rayon de 5 block
+
+# 18 Decembre
+***
+* Ajout d'une texture au block node
+
+# 20 Decembre
+***
