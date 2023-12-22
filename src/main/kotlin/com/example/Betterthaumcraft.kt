@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory
 object Betterthaumcraft : ModInitializer {
     private val logger = LoggerFactory.getLogger("betterthaumcraft")
 	val magicOMeter: MagicOMeter = MagicOMeter(FabricItemSettings())
-	private val cursedStatusEffect: CursedStatusEffect = CursedStatusEffect()
+	val cursedStatusEffect: CursedStatusEffect = CursedStatusEffect()
 
 	override fun onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.

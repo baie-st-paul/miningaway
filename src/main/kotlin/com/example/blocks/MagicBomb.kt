@@ -1,5 +1,6 @@
 package com.example.blocks
 
+import com.example.Betterthaumcraft
 import com.example.status.CursedStatusEffect
 import jdk.jshell.Snippet.Status
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
@@ -8,6 +9,7 @@ import net.minecraft.block.BlockState
 import net.minecraft.entity.effect.StatusEffect
 import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.effect.StatusEffectUtil
+import net.minecraft.entity.effect.StatusEffects
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.text.Text
 import net.minecraft.util.ActionResult
@@ -30,7 +32,8 @@ class MagicBomb(settings: FabricBlockSettings) : Block(settings)  {
     ): ActionResult {
         if (!world.isClient) {
             player.sendMessage(Text.of("Bye Bye"), false)
-            //cursePlayerInZone(world, pos, 100.0)
+            cursePlayerInZone(world, pos, 100.0)
+
             world.createExplosion(
                 null,
                 pos.x.toDouble(),
@@ -48,10 +51,9 @@ class MagicBomb(settings: FabricBlockSettings) : Block(settings)  {
     private fun cursePlayerInZone(world: World, pos: BlockPos, range: Double) {
         val player = world.getClosestPlayer(pos.x.toDouble(), pos.y.toDouble(), pos.z.toDouble(), range, false)
 
-
         if (player != null) {
 
-            player.addStatusEffect(StatusEffectInstance(CursedStatusEffect(), 1000, 1))
+            player.addStatusEffect(StatusEffectInstance(Betterthaumcraft.cursedStatusEffect, 1000, 1))
             println("got here")
         }
 
