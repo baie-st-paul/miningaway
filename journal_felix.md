@@ -68,9 +68,20 @@ donc, maintenant on sais que le wiki est au moins pas complet pour fabric.
 
 to implement the areas, i settled on simply making a block with an attached block entity, and to scan for a certain
 number of that block in the suroundings. to do so, im looking through this very comprehensive
-tutorial: https://fabricmc.net/wiki/tutorial:screenhandler
+tutorial: https://fabricmc.net/wiki/tutorial:screenhandler 
 and im also looking on using the `world.collectEntityByType` function.
 
 ---
 
-en fin de compte j'ai pas du tout fait ca. j'ai juste fais une fonction qui prend une position et le `World` et qui parcoure manuellement avec des for loops les entourages de la position dans un range donné, retournant le nombre de NodeStoneEntity trouvée. probablement refactorable pour n'importe quel bloc
+en fin de compte j'ai pas du tout fait ca. j'ai juste fais une fonction qui prend une position 
+et le `World` et qui parcoure manuellement avec des for loops les entourages de la position dans 
+un range donné, retournant le nombre de NodeStoneEntity trouvée. probablement refactorable pour
+n'importe quel bloc
+
+## 22 decembre 2023
+
+dernier jours!
+
+---
+
+philipe travail sur l'ajout du model pour la nodestone

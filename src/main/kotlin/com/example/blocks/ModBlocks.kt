@@ -57,7 +57,9 @@ class ModBlocks {
                 ),
             )
             ItemGroupEvents.modifyEntriesEvent(group)
-                .register { content -> content.add(item) }
+                .register { content ->
+                    content.add(item)
+                }
             return item
 
         }
