@@ -3,5 +3,6 @@
   "block.betterthaumcraft.magic_bomb": "Magic Bomb",
   "item.betterthaumcraft.magic_meter": "MagicOMeter",
   "block.betterthaumcraft.node_stone": "Node Stone",
-  "block.betterthaumcraft.magicrafter": "Magicrafter"
+  "block.betterthaumcraft.magicrafter": "Magicrafter",
+  "effect.betterthaumcraft.cursed_effect": "Cursed"
 }

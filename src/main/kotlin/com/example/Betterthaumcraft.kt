@@ -2,6 +2,7 @@ package com.example
 
 import com.example.blocks.ModBlocks
 import com.example.items.MagicOMeter
+import com.example.status.CursedStatusEffect
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.registry.*
@@ -11,8 +12,8 @@ import org.slf4j.LoggerFactory
 
 object Betterthaumcraft : ModInitializer {
     private val logger = LoggerFactory.getLogger("betterthaumcraft")
-
 	val magicOMeter: MagicOMeter = MagicOMeter(FabricItemSettings())
+	private val cursedStatusEffect: CursedStatusEffect = CursedStatusEffect()
 
 	override fun onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -29,7 +30,14 @@ object Betterthaumcraft : ModInitializer {
 			magicOMeter
 		)
 
-
+		Registry.register(
+			Registries.STATUS_EFFECT,
+			Identifier(
+				"betterthaumcraft",
+				"cursed_effect"
+			),
+			cursedStatusEffect
+		)
 	}
 }
 
