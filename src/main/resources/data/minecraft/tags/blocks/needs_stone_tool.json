@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "betterthaumcraft:magic_bomb"
+    "betterthaumcraft:magic_bomb",
+    "betterthaumcraft:node_stone"
   ]
 }

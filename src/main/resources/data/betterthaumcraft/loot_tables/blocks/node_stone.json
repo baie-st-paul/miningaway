@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "betterthaumcraft:magic_bomb",
+          "name": "betterthaumcraft:node_stone",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -15,11 +15,6 @@
                 "max": 1.0,
                 "type": "minecraft:uniform"
               }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:survives_explosion"
             }
           ]
         }

@@ -20,7 +20,7 @@ class ModBlocks {
 
         private val MAGIC_BOMB_BLOCK = MagicBomb(FabricBlockSettings.of(Material.METAL).strength(4f))
         private val MAGICRAFTER = Magicrafter(FabricBlockSettings.of(Material.WOOD).strength(2f).nonOpaque())
-        private val NODE_STONE = NodeStone(FabricBlockSettings.of(Material.AMETHYST).strength(3f))
+        private val NODE_STONE = NodeStone(FabricBlockSettings.of(Material.METAL).strength(3f).nonOpaque())
         val NODE_STONE_ENTITY: BlockEntityType<NodeStoneEntity> = FabricBlockEntityTypeBuilder
             .create(::NodeStoneEntity, NODE_STONE)
             .build()
