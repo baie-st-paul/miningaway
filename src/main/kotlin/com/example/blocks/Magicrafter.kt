@@ -1,12 +1,11 @@
 package com.example.blocks
-
+import net.minecraft.block.BlockState
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
 import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
-
 import com.example.util.isNodeStoneInThere
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory
 import net.minecraft.block.*
@@ -23,8 +22,6 @@ import net.minecraft.screen.ScreenHandler
 import net.minecraft.server.network.ServerPlayerEntity
 import net.minecraft.text.Text
 import net.minecraft.util.collection.DefaultedList
-import net.minecraft.util.shape.VoxelShape
-import net.minecraft.world.BlockView
 
 class Magicrafter(settings: Settings) : BlockWithEntity(settings), BlockEntityProvider {
 
@@ -51,7 +48,7 @@ class Magicrafter(settings: Settings) : BlockWithEntity(settings), BlockEntityPr
     override fun getRenderType(state: BlockState?): BlockRenderType {
         return BlockRenderType.MODEL
     }
-
+/*
     override fun <T : BlockEntity?> getTicker(
         world: World?,
         state: BlockState?,
@@ -60,7 +57,7 @@ class Magicrafter(settings: Settings) : BlockWithEntity(settings), BlockEntityPr
         return validateTicker(type, ModBlocks.MAGICRAFTER_ENTITY,
             {world1, pos, state1, blockEntity -> blockEntity.tick(world1, pos, state1)})
     }
-
+*/
 
 }
 
