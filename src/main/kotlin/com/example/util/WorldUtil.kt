@@ -5,7 +5,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.Position
 import net.minecraft.world.World
 
-public fun isNodeStoneInThere(world: World, pos: BlockPos, range: Int): UInt {
+fun isNodeStoneInThere(world: World, pos: BlockPos, range: Int): UInt {
     val range = 5
     var count = 0u
     for (x in pos.x-range..pos.x+range) {

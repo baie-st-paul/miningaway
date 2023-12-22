@@ -15,3 +15,9 @@
 
 # 20 Decembre
 ***
+* Tester les features de blockBench
+
+# 22 Decembre
+***
+* Ajout d'un objet blockbench qui sert de node de magie
+* Ajout d'un fichier langue en_us qui permet de donner des nom propres aux objets

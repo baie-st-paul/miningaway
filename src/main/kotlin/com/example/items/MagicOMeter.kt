@@ -19,4 +19,5 @@ class MagicOMeter(settings: FabricItemSettings) : Item(settings){
         return TypedActionResult.success(ItemStack(Betterthaumcraft.magicOMeter, 1))
     }
 
+
 }

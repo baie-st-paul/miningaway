@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "betterthaumcraft:block/node_stone"
+    }
+  }
+}

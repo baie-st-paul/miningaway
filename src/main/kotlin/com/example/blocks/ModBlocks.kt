@@ -20,14 +20,16 @@ class ModBlocks {
 
         private val MAGIC_BOMB_BLOCK = MagicBomb(FabricBlockSettings.of(Material.METAL).strength(4f))
         private val MAGICRAFTER = Magicrafter(FabricBlockSettings.of(Material.WOOD).strength(2f))
-        private val NODE_STONE = NodeStone(FabricBlockSettings.of(Material.STONE).strength(3f))
-        val NODE_STONE_ENTITY = FabricBlockEntityTypeBuilder.create(::NodeStoneEntity, NODE_STONE).build(null)
+        private val NODE_STONE = NodeStone(FabricBlockSettings.of(Material.AMETHYST).strength(3f))
+        val NODE_STONE_ENTITY: BlockEntityType<NodeStoneEntity> = FabricBlockEntityTypeBuilder
+            .create(::NodeStoneEntity, NODE_STONE)
+            .build(null)
 
         fun registerAllBlocks() {
             registerBlock("magic_bomb", MAGIC_BOMB_BLOCK, ItemGroups.COMBAT)
             registerBlock("magicrafter", MAGICRAFTER, ItemGroups.FUNCTIONAL)
             registerBlock("node_stone", NODE_STONE, ItemGroups.BUILDING_BLOCKS)
-            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier("betterthaumcraft", "node_stone"), NODE_STONE_ENTITY, )
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier("betterthaumcraft", "node_stone"), NODE_STONE_ENTITY)
         }
 
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
