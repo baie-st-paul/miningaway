@@ -106,3 +106,21 @@ je suis dans le processus d'implementer le magicrafter en suivant ces deux tutos
 la video 1 viens de me donner un incroyabel tip: faire `ctrl+h` quand tu hover une interface dans intellij permet de 
 voir la hierarchie de cette interface. entre autre, ca permet de voir tous les exemples de block entity dans le code 
 source de minecraft en fesant `ctrl+h` sur l'interface `BlockEntity`!
+
+---
+
+je comprend pas pourquoi, mais la methode `validateTicker` dans mon tutoriel n'existe pas... -_- je vais juste abandonner cette feat.
+
+---
+
+on viens de realiser que finalement les tutos qu'on suit sont pour fabric pour 1.20 alors que nous on est sur 1.19.4.
+c'est la source de plusieurs de nos problemes, probablement
+
+---
+
+je suis en train de voir pour ajouter le menu du magicrafter.
+
+J'ai eu des problemes avec une interface fonctionnelle que le tuto me demandait de copier coller et sa conversion en 
+kotlin. ca, ca a pas l'air d'etre au point... en tout cas c'est pas automatique. (l'interface, c'est `ImplementedInventory)
+je l'ai mis a la place dans le package java et ca a l'air de fonctionner
+

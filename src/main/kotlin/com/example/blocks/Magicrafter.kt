@@ -52,15 +52,6 @@ class Magicrafter(settings: Settings) : BlockWithEntity(settings), BlockEntityPr
         return BlockRenderType.MODEL
     }
 
-    override fun <T : BlockEntity?> getTicker(
-        world: World?,
-        state: BlockState?,
-        type: BlockEntityType<T>?
-    ): BlockEntityTicker<T>? {
-        return validateTicker(type, ModBlocks.MAGICRAFTER_ENTITY,
-            {world1, pos, state1, blockEntity -> blockEntity.tick(world1, pos, state1)})
-    }
-
 
 }
 
@@ -106,9 +97,12 @@ class MagicrafterEntity(pos: BlockPos?, state: BlockState?) : BlockEntity(ModBlo
         this.progress = nbt!!.getInt("magicrafter.progress")
     }
 
-    public fun tick(world: World, pos: BlockPos, state: BlockState) {
-        if (world.isClient()) return
+    fun craft() {
+        this.removeStack(INPUT_SLOT, 1)
 
+        val result = ItemStack(ModBlocks.MAGIC_BOMB_ITEM)
+
+        this.setStack(OUTPUT_SLOT, result)
     }
 
 }
