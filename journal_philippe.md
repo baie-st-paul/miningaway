@@ -22,4 +22,4 @@
 * Ajout d'un objet blockbench qui sert de node de magie
 * Ajout d'un fichier langue en_us qui permet de donner des nom propres aux objets
 * Ajout d'un status effect qui donne cursed au player
-* Essayer de donner le status aux player qui sont dans un rayon de 5 block de la bombe mais sans succes
+* Ajout de donner le status aux player qui sont dans un rayon de 100 block de la bombe
