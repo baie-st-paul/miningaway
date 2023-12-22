@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "i",
+    "S"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:redstone_torch"
+    },
+    "S": {
+      "item": "betterthaumcraft:node_stone"
+    }
+  },
+  "result": {
+    "item": "betterthaumcraft:magic_meter",
+    "count": 1
+  }
+}
