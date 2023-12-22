@@ -84,4 +84,25 @@ dernier jours!
 
 ---
 
-philipe travail sur l'ajout du model pour la nodestone
+philippe travail sur l'ajout du model pour la nodestone.
+
+---
+
+j'ai ajouté des recettes pour le magic_meter et la magic_bomb. je me suis entierement basé sur le code
+de l'autre equipe.
+
+--- 
+
+philippe a reuissit a faire render le model, mais on vois toujours au travers du monde.
+
+---
+
+je suis dans le processus d'implementer le magicrafter en suivant ces deux tutos:
+- https://www.youtube.com/watch?v=Y4dK9ETdZCQ
+- https://www.youtube.com/watch?v=Lmf4fy_b0LQ
+
+---
+
+la video 1 viens de me donner un incroyabel tip: faire `ctrl+h` quand tu hover une interface dans intellij permet de 
+voir la hierarchie de cette interface. entre autre, ca permet de voir tous les exemples de block entity dans le code 
+source de minecraft en fesant `ctrl+h` sur l'interface `BlockEntity`!
